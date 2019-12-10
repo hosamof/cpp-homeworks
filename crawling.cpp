@@ -75,11 +75,11 @@ void printGraph(int node, int parentNodes[], int degree) {
         }
     }
 }
-int main(int argc, char* argd[])
+int main(int argc, char* argv[])
 {
     // TODO : DELETE
-    argc = 2;   
-    char argv[2][40] = { "My App" , "3ABCD1BCD1CDE" }; // 1EFGH1DFGH
+    // argc = 2;   
+    // char argv[2][40] = { "My App" , "3ABCD1BCD1CDE" }; // 1EFGH1DFGH
     // TODO : DELETE
 
     ///
