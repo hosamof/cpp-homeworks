@@ -2,36 +2,37 @@
 // Ogrenci Numara : 1306180155
 // Date : 06.12.2019
 // Development Environment: Visual Studio 2019
-
+/*
 #include <iostream> 
 using namespace std;
 
 int graph[256][256];
-int max , firstNode;
+int max, firstNode;
 
 // read graph function
 void readGraph(string graphInfo) {
     // ### init max , firstNode and graph ###
     // 1- max : 
-    int x = 0;
+    int index = 0;
     max = 0;
-    while (isdigit(graphInfo[x])) {
-        max = (max * 10) + (graphInfo[x] - '0'); // ((int)graphInfo[0]) - ((int)'0')        
-        x++;
+    while (isdigit(graphInfo[index])) {
+        max = (max * 10) + (graphInfo[index] - '0'); // ((int)graphInfo[0]) - ((int)'0')        
+        index++;
     }
     cout << "max = " << max << endl;
 
     // 2- First Node  
-    firstNode = graphInfo[x];
-    cout << "x = " << x << endl;
+    firstNode = graphInfo[index];
+    cout << "firstNode = " << (char)firstNode << endl 
+        << "-------------" << endl << endl;    
 
     // 3- Graph
-    graph[256][256] = { 0 }; //int graph[256][256] = { 0 };
+    graph[256][256] = { 0 };
 
 
     // ### initialize graph array by looping on graphInfo string ###
     int startNode = -1;
-    for (int i = x; i < graphInfo.size(); i++)
+    for (int i = index; i < graphInfo.size(); i++)
     {
         // start of word
         if (graphInfo[i] != '1' && startNode == -1) {
@@ -49,37 +50,42 @@ void readGraph(string graphInfo) {
     }
 }
 // print graph
-void printGraph(int node, int parentNodes[], int degree) {
+void printGraph(int node, string parentNodes, int degree) {
     // First : check current degree if more than allowed length of path (word letters)
     if (degree >= max) return;
-    
-    // print parent nodes if found
-    if (degree > 0) {
-        for (int i = 0; i < degree ; i++)
-        {
-            cout << (char)parentNodes[i];
-        }
-    }
-    
-    // print current node
-    cout << (char)node << endl;
 
-    // save current node increase degree
-    parentNodes[degree++] = node;
+    // if first node print it first
+    if (degree == 1) cout << (char)node << endl;
 
-    // search if has childs to continue the path
+    // add this node to parents
+    parentNodes += (char)node;
+
+    // init node children
+    string children = "";
+
+    // search if has children print them then move to the next degree
     for (int i = 0; i < 256; i++)
     {
-        if (graph[node][i] == 1) {           
-            printGraph(i, parentNodes , degree);
+        if (graph[node][i] == 1) {
+            // print child node
+            cout << parentNodes << (char)i << endl;
+
+            // save child
+            children += i;
         }
     }
+
+    // call print for childres    
+    for (int i = 0; i < children.size() ; i++)
+    {        
+        printGraph(children[i], parentNodes, degree + 1);
+    }    
 }
 int main(int argc, char* argv[])
 {
     // TODO : DELETE
     // argc = 2;   
-    // char argv[2][40] = { "My App" , "3ABCD1BCD1CDE" }; // 1EFGH1DFGH
+    // char argv[2][40] = { "My App" , "5ABCD1BCD1CDE" }; // 1EFGH1DFGH    
     // TODO : DELETE
 
     ///
@@ -90,11 +96,11 @@ int main(int argc, char* argv[])
     if (argc <= 1) {
         cout << "\nPlease enter the application name - the graph info";
         return 0;
-    }    
+    }
 
     // check if the graph empty
     string graphInfo = argv[1];
-    if (graphInfo.size()== 0 ) {
+    if (graphInfo.size() == 0) {
         cout << "graph info must not be empty";
         return 0;
     }
@@ -110,13 +116,12 @@ int main(int argc, char* argv[])
     ///
     readGraph(graphInfo);
 
-    
-    
+
+
     ///
     /// 3- ### print result from the graph array ###
-    ///
-    int *parentNodes = new int[max];
-    printGraph(firstNode, parentNodes , 0);    
-    
+    ///    
+    printGraph(firstNode, "", 1);
+
     return 0;
-}
+}*/
