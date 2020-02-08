@@ -148,8 +148,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1306180155.cpp" />
+    <ClCompile Include="abdullah.cpp" />
     <ClCompile Include="Crawling.cpp" />
     <ClCompile Include="Crawling_2.cpp" />
+    <ClCompile Include="friends.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -24,5 +24,11 @@
     <ClCompile Include="1306180155.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="friends.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="abdullah.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

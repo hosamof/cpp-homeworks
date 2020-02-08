@@ -2,7 +2,7 @@
 // Ogrenci Numara : 1306180155
 // Date : 06.12.2019
 // Development Environment: Visual Studio 2019
-
+/*
 #include <iostream> 
 using namespace std;
 
@@ -119,4 +119,4 @@ int main(int argc, char* argv[])
     printGraph(firstNode, "", 1);
 
     return 0;
-}
+}*/

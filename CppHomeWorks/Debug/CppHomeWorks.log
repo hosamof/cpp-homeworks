@@ -1,6 +1,8 @@
-﻿  1306180155.cpp
-D:\Vs2019\repos\CppHomeWorks\CppHomeWorks\1306180155.cpp(35,27): warning C4018: '<': signed/unsigned mismatch
-D:\Vs2019\repos\CppHomeWorks\CppHomeWorks\1306180155.cpp(79,23): warning C4018: '<': signed/unsigned mismatch
-  Crawling_2.cpp
-  Generating Code...
+﻿  abdullah.cpp
+D:\Vs2019\repos\CppHomeWorks\CppHomeWorks\abdullah.cpp(12,30): warning C4309: 'default argument': truncation of constant value
+D:\Vs2019\repos\CppHomeWorks\CppHomeWorks\abdullah.cpp(22,27): warning C4018: '<': signed/unsigned mismatch
+D:\Vs2019\repos\CppHomeWorks\CppHomeWorks\abdullah.cpp(28,27): warning C4018: '<': signed/unsigned mismatch
+D:\Vs2019\repos\CppHomeWorks\CppHomeWorks\abdullah.cpp(64,23): warning C4018: '<': signed/unsigned mismatch
+D:\Vs2019\repos\CppHomeWorks\CppHomeWorks\abdullah.cpp(85,27): warning C4018: '<': signed/unsigned mismatch
+D:\Vs2019\repos\CppHomeWorks\CppHomeWorks\abdullah.cpp(98,27): warning C4018: '<': signed/unsigned mismatch
   CppHomeWorks.vcxproj -> D:\Vs2019\repos\CppHomeWorks\Debug\CppHomeWorks.exe
